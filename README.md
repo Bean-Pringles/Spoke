@@ -1,6 +1,13 @@
 Spoke Overview
 This scripting engine supports custom logic, variables, math operations, conditionals, functions, and utility commands like printing, input, time, and randomness.
 
+How to run
+To run Spoke, you must navigate to your spoke.py in the terminal and run:
+
+python spoke.py exampleCode.spk*
+
+*spk files are just txt files saved as spk, thought this would be fun.
+
 Core Rules
 All commands are line-based.
 
