@@ -4,7 +4,7 @@ This scripting engine supports custom logic, variables, math operations, conditi
 How to run
 To run Spoke, you must navigate to your spoke.py in the terminal and run:
 
-python spoke.py exampleCode.spk*
+python spoke.py exampleScript.spk*
 
 *spk files are just txt files saved as spk, thought this would be fun.
 
