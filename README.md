@@ -21,6 +21,10 @@ Variable names should be alphanumeric and case-sensitive.
 
 All errors halt execution.
 
+Comments
+Use either # or @ at the beggining of the line to comment it out
+It can not be any where at the line except for the beggining
+
 Variable Commands
 let
 Syntax:
