@@ -1,5 +1,4 @@
-Scripting Language Reference Guide
-Overview
+Spoke Overview
 This scripting engine supports custom logic, variables, math operations, conditionals, functions, and utility commands like printing, input, time, and randomness.
 
 Core Rules
