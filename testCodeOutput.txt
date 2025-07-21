@@ -1,0 +1,126 @@
+=== SPOKE EXTREME STRESS TEST STARTING ===
+TEST 1: Creating 100 variables with complex operations
+6.0
+TEST 2: 10-level deep nested conditionals
+Level 1
+Level 2
+Level 3
+Level 4
+Level 5
+Level 6
+Level 7
+Level 8
+Level 9
+Level 10 - DEEPEST LEVEL REACHED!
+TEST 3: 20-branch else-if chain
+Branch 15 - FOUND THE RIGHT BRANCH!
+TEST 4: Complex recursive-style function calls
+Calling mathHeavy with complex parameters
+41.25
+Calling nestedCalls with countdown
+5
+4
+3
+2
+1
+0
+TEST 5: Massive string operations
+26
+10
+21
+34
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+SpecialChars!@#$%^&*()
+VeryLongStringThatWillBeManipulated
+TEST 6: Mathematical torture test with extreme values
+1888887
+456665.544
+-800
+-100000
+-200
+TEST 7: Complex multi-condition logic torture
+All ascending - correct!
+At least one condition met - correct!
+Negation logic works - correct!
+Mixed operators work - correct!
+TEST 8: Variable manipulation chaos
+Before chaos:
+100
+200
+300
+400
+500
+chaos1 is Less than chaos2
+chaos3 is Less than chaos4
+After first round of chaos:
+500
+400
+1
+200
+100
+TEST 9: Memory and scope torture test
+4
+2
+2
+4
+2
+40
+20
+200
+40
+20
+4000
+200
+2000
+400
+200
+TEST 10: Edge case torture
+Zero comparison works
+1.0
+42
+-150
+5000
+-175
+-25
+Negative comparison works
+Negative to negative comparison works
+TEST 11: String edge cases
+0
+1
+30
+19
+TEST 12: Maximum computational stress
+Computing heavy operations...
+385
+TEST 13: Toggle and swap extreme testing
+Pre-toggle values:
+0
+1
+true
+false
+Post-double-toggle values:
+0
+1
+true
+false
+TEST 14: Function parameter extremes
+55
+120
+TEST 15: FINAL COMBINED TORTURE TEST
+Inner condition met
+Current param value:
+1
+27.0
+Base case reached
+Inner condition met
+Current param value:
+1
+42.0
+Inner condition met
+Current param value:
+1
+62.0
+swapTest2 is Greater than swapTest1
+=== STRESS TEST COMPLETED - IF YOU SEE THIS, YOUR INTERPRETER SURVIVED! ===
+Congratulations! Your Spoke interpreter handled extreme stress conditions!
