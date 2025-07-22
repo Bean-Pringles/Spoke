@@ -88,7 +88,6 @@ Negative to negative comparison works
 TEST 11: String edge cases
 0
 1
-30
 19
 TEST 12: Maximum computational stress
 Computing heavy operations...
@@ -106,7 +105,7 @@ true
 false
 TEST 14: Function parameter extremes
 55
-120
+3
 TEST 15: FINAL COMBINED TORTURE TEST
 Inner condition met
 Current param value:
