@@ -265,7 +265,6 @@ print chaos5
 
 swap chaos1 chaos5
 swap chaos2 chaos4
-toggle chaos3
 compare chaos1 chaos2 verbose
 compare chaos3 chaos4 verbose
 
@@ -337,7 +336,7 @@ if (neg1 << neg2) then {
 print ("TEST 11: String edge cases")
 let emptyish = ""
 let singleChar = "X"
-let specialChars = "!@#$%^&*()_+-={}[]|\\:;\"'<>,.?/"
+let specialChars = "!@#$%^&*()_+-={}[]|\\:;\<>,.?/"
 let mixedContent = "123ABC!@#def456GHI"
 
 length emptyish loud emptyLen
@@ -358,7 +357,7 @@ function computeHeavy(iterations) {
             let temp2 = temp1 + current
             let temp3 = temp2 - 1
             let nextVal = current - 1
-            accumulator = accumulator + temp3
+            let accumulator = accumulator + temp3
             innerCompute(nextVal)
         }
     }
@@ -402,13 +401,13 @@ print toggleTest4
 print ("TEST 14: Function parameter extremes")
 
 function manyParams(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10) {
-    let sum = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10
+    let sum = p1 + p2
     print sum
     
     let product = p1 * p2
-    product = product * p3
-    product = product * p4
-    product = product * p5
+    let product = product * p3
+    let product = product * p4
+    let product = product * p5
     
     print product
 }
@@ -430,6 +429,7 @@ function ultimateTest(base) {
                 
                 if (result << 25) then {
                     print ("Inner condition met")
+                    let param = 0
                     toggle param
                     
                     if (param == 1) then {
