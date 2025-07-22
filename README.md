@@ -1,3 +1,4 @@
+***Please Report Any Issues You Find In Anything, God Bless Opean Source :D***
 Spoke Overview
 This scripting engine supports custom logic, variables, math operations, conditionals, functions, and utility commands like printing, input, time, and randomness.
 
