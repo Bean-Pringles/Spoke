@@ -1,0 +1,403 @@
+# Comprehensive If-Else Debug Test
+# This will stress-test your interpreter's if-else handling
+# Expected outputs are marked with @ comments
+
+@ Expected: Starting comprehensive if-else debug test
+
+print ( "Starting comprehensive if-else debug test" )
+
+# Test 1: Basic if-else with different data types
+@ Expected: Testing basic comparisons
+print ( "=== Test 1: Basic Comparisons ===" )
+
+let a = 10
+let b = 5
+let c = 10
+let str1 = "hello"
+let str2 = "world"
+let str3 = "hello"
+
+if ( a >> b ) then {
+    print ( "PASS: 10 > 5" )
+} else {
+    print ( "FAIL: 10 > 5" )
+}
+
+if ( a == c ) then {
+    print ( "PASS: 10 == 10" )
+} else {
+    print ( "FAIL: 10 == 10" )
+}
+
+if ( str1 != str2 ) then {
+    print ( "PASS: hello != world" )
+} else {
+    print ( "FAIL: hello != world" )
+}
+
+if ( str1 == str3 ) then {
+    print ( "PASS: hello == hello" )
+} else {
+    print ( "FAIL: hello == hello" )
+}
+
+# Test 2: Complex nested if-else chains
+@ Expected: Testing nested conditions
+print ( "=== Test 2: Nested If-Else Chains ===" )
+
+let score = 85
+let grade = ""
+
+if ( score >= 90 ) then {
+    let grade = "A"
+    print ( "Grade A assigned" )
+} else if ( score >= 80 ) then {
+    let grade = "B"
+    print ( "Grade B assigned" )
+    if ( score >= 85 ) then {
+        print ( "High B grade" )
+    } else {
+        print ( "Low B grade" )
+    }
+} else if ( score >= 70 ) then {
+    let grade = "C"
+    print ( "Grade C assigned" )
+} else if ( score >= 60 ) then {
+    let grade = "D"
+    print ( "Grade D assigned" )
+} else {
+    let grade = "F"
+    print ( "Grade F assigned" )
+}
+
+# Test 3: Multiple conditions with logical operators
+@ Expected: Testing logical operators
+print ( "=== Test 3: Logical Operators ===" )
+
+let x = 15
+let y = 25
+let z = 35
+
+if ( x << 20 and y >> 20 ) then {
+    print ( "PASS: x<20 AND y>20" )
+} else {
+    print ( "FAIL: x<20 AND y>20" )
+}
+
+if ( x >> 20 or y >> 20 ) then {
+    print ( "PASS: x>20 OR y>20" )
+} else {
+    print ( "FAIL: x>20 OR y>20" )
+}
+
+if ( x << 10 or y << 10 or z >> 30 ) then {
+    print ( "PASS: Complex OR condition" )
+} else {
+    print ( "FAIL: Complex OR condition" )
+}
+
+# Test 4: Negation with 'not' keyword
+@ Expected: Testing negation
+print ( "=== Test 4: Negation Tests ===" )
+
+let flag = 1
+let counter = 0
+
+if ( not flag == 0 ) then {
+    print ( "PASS: not flag == 0" )
+} else {
+    print ( "FAIL: not flag == 0" )
+}
+
+if ( not counter >> 5 ) then {
+    print ( "PASS: not counter > 5" )
+} else {
+    print ( "FAIL: not counter > 5" )
+}
+
+# Test 5: Edge cases with type conversions
+@ Expected: Testing type edge cases
+print ( "=== Test 5: Type Edge Cases ===" )
+
+let num_str = 42
+let actual_str = "hello"
+let zero = 0
+let empty_str = ""
+
+if ( num_str == 42 ) then {
+    print ( "PASS: Number comparison" )
+} else {
+    print ( "FAIL: Number comparison" )
+}
+
+if ( zero == 0 ) then {
+    print ( "PASS: Zero comparison" )
+} else {
+    print ( "FAIL: Zero comparison" )
+}
+
+# Test 6: Deeply nested if-else structures
+@ Expected: Testing deep nesting
+print ( "=== Test 6: Deep Nesting ===" )
+
+let depth = 3
+
+if (depth >> 0) then {
+    print ("Depth 1 achived")
+    if (depth >> 1) then {
+        print ("Depth 2 achived)
+        if (depth >> 2) then {
+            print ("Shoud Stop Here")
+            if (depth >> 3) then {
+                print ("FAILED: Went to deep")
+            } else {
+                print ("PASSED: Depth Achived")
+            }
+        } else {
+            print ("FAILED: To shallow")
+        }
+    } else {
+        print ("FAILED: To shallow")
+    }
+} else {
+    print ("FAILED: To shallow")
+}
+
+# Test 7: Complex if-else-if chains
+@ Expected: Testing complex chains
+print ( "=== Test 7: Complex Chains ===" )
+
+let test_val = 50
+
+if ( test_val << 10 ) then {
+    print ( "Range: 0-9" )
+} else if ( test_val << 20 ) then {
+    print ( "Range: 10-19" )
+} else if ( test_val << 30 ) then {
+    print ( "Range: 20-29" )
+} else if ( test_val << 40 ) then {
+    print ( "Range: 30-39" )
+} else if ( test_val << 60 ) then {
+    print ( "PASS: Range 40-59" )
+} else if ( test_val << 70 ) then {
+    print ( "Range: 60-69" )
+} else if ( test_val << 80 ) then {
+    print ( "Range: 70-79" )
+} else {
+    print ( "Range: 80+" )
+}
+
+# Test 8: Mixed operators and precedence
+@ Expected: Testing operator precedence
+print ( "=== Test 8: Operator Precedence ===" )
+
+let p = 10
+let q = 20
+let r = 30
+
+if ( p << q and q << r and r >> p ) then {
+    print ( "PASS: Multiple AND conditions" )
+} else {
+    print ( "FAIL: Multiple AND conditions" )
+}
+
+if ( p >> q or q >> r or r >> p ) then {
+    print ( "PASS: Mixed OR with true condition" )
+} else {
+    print ( "FAIL: Mixed OR should be true" )
+}
+
+# Test 9: Boundary value testing
+@ Expected: Testing boundary values
+print ( "=== Test 9: Boundary Values ===" )
+
+let boundary = 100
+
+if ( boundary == 100 ) then {
+    print ( "PASS: Exact boundary match" )
+} else {
+    print ( "FAIL: Exact boundary match" )
+}
+
+if ( boundary >= 100 ) then {
+    print ( "PASS: Greater than or equal boundary" )
+} else {
+    print ( "FAIL: Greater than or equal boundary" )
+}
+
+if ( boundary <= 100 ) then {
+    print ( "PASS: Less than or equal boundary" )
+} else {
+    print ( "FAIL: Less than or equal boundary" )
+}
+
+# Test 10: String comparisons
+@ Expected: Testing string operations
+print ( "=== Test 10: String Comparisons ===" )
+
+let str_a = "apple"
+let str_b = "banana"
+let str_c = "apple"
+
+if ( str_a == str_c ) then {
+    print ( "PASS: String equality" )
+} else {
+    print ( "FAIL: String equality" )
+}
+
+if ( str_a != str_b ) then {
+    print ( "PASS: String inequality" )
+} else {
+    print ( "FAIL: String inequality" )
+}
+
+# Test 11: Variables in conditions
+@ Expected: Testing variable conditions
+print ( "=== Test 11: Variable Conditions ===" )
+
+let condition_var = 1
+let result_var = 0
+
+if ( condition_var == 1 ) then {
+    let result_var = 100
+    print ( "PASS: Variable condition true" )
+} else {
+    let result_var = 200
+    print ( "FAIL: Variable condition should be true" )
+}
+
+# Test 12: Multiple nested else-if with complex conditions
+@ Expected: Testing complex nested structure
+print ( "=== Test 12: Complex Nested Structure ===" )
+
+let category = 2
+let subcategory = 3
+
+if ( category == 1 ) then {
+    print ( "Category 1" )
+    if ( subcategory == 1 ) then {
+        print ( "Sub 1-1" )
+    } else if ( subcategory == 2 ) then {
+        print ( "Sub 1-2" )
+    } else {
+        print ( "Sub 1-other" )
+    }
+} else if ( category == 2 ) then {
+    print ( "PASS: Category 2" )
+    if ( subcategory == 1 ) then {
+        print ( "Sub 2-1" )
+    } else if ( subcategory == 2 ) then {
+        print ( "Sub 2-2" )
+    } else if ( subcategory == 3 ) then {
+        print ( "PASS: Sub 2-3" )
+    } else {
+        print ( "Sub 2-other" )
+    }
+} else {
+    print ( "Category other" )
+}
+
+# Test 13: Testing all comparison operators
+@ Expected: Testing all operators
+print ( "=== Test 13: All Comparison Operators ===" )
+
+let val1 = 15
+let val2 = 20
+let val3 = 15
+
+# Test ==
+if ( val1 == val3 ) then {
+    print ( "PASS: == operator" )
+} else {
+    print ( "FAIL: == operator" )
+}
+
+# Test !=
+if ( val1 != val2 ) then {
+    print ( "PASS: != operator" )
+} else {
+    print ( "FAIL: != operator" )
+}
+
+# Test <<
+if ( val1 << val2 ) then {
+    print ( "PASS: << operator" )
+} else {
+    print ( "FAIL: << operator" )
+}
+
+# Test >>
+if ( val2 >> val1 ) then {
+    print ( "PASS: >> operator" )
+} else {
+    print ( "FAIL: >> operator" )
+}
+
+# Test <=
+if ( val1 <= val3 ) then {
+    print ( "PASS: <= operator" )
+} else {
+    print ( "FAIL: <= operator" )
+}
+
+# Test >=
+if ( val3 >= val1 ) then {
+    print ( "PASS: >= operator" )
+} else {
+    print ( "FAIL: >= operator" )
+}
+
+# Test 14: Error-prone edge cases
+@ Expected: Testing edge cases
+print ( "=== Test 14: Edge Cases ===" )
+
+let zero_val = 0
+let one_val = 1
+let neg_val = -5
+
+if ( zero_val == 0 ) then {
+    print ( "PASS: Zero comparison" )
+} else {
+    print ( "FAIL: Zero comparison" )
+}
+
+if ( neg_val << 0 ) then {
+    print ( "PASS: Negative number comparison" )
+} else {
+    print ( "FAIL: Negative number comparison" )
+}
+
+if ( one_val >> zero_val ) then {
+    print ( "PASS: 1 > 0" )
+} else {
+    print ( "FAIL: 1 > 0" )
+}
+
+# Test 15: Final complex test
+@ Expected: Final comprehensive test
+print ( "=== Test 15: Final Complex Test ===" )
+
+let final_a = 25
+let final_b = 35
+let final_c = 25
+let final_str = "test"
+
+if ( final_a == final_c and final_b >> final_a ) then {
+    print ( "PASS: Complex condition 1" )
+    if ( final_str == "test" ) then {
+        print ( "PASS: Nested string check" )
+        if ( not final_a >> final_b ) then {
+            print ( "PASS: Nested negation" )
+        } else {
+            print ( "FAIL: Nested negation" )
+        }
+    } else {
+        print ( "FAIL: Nested string check" )
+    }
+} else {
+    print ( "FAIL: Complex condition 1" )
+}
+
+@ Expected: Debug test completed successfully
+print ( "=== Debug Test Completed ===" )
+print ( "If all PASS messages appeared, your interpreter handles if-else correctly!" )
