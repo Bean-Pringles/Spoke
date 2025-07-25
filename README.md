@@ -1,4 +1,4 @@
-Alpha 1.0.4.3
+Alpha 1.1.0.2
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
 
