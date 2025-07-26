@@ -15,5 +15,6 @@ def run(args):
         print("Available commands:")
         for name in sorted(command_names):
             print(" -", name)
+        print("Run a command without arguements to see what it does")
     else:
         print("No command files found.")
