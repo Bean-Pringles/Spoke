@@ -12,11 +12,11 @@ def run(args):
         filename = os.path.join(script_dir, f"{command}.py")
         
         if os.path.exists(filename):
-            confirm = input(f"Are you sure you want to uninstall '{command}'? (y/N): ").strip().lower()
-            if confirm == 'y':
+            confirm = input(f"Are you sure you want to uninstall '{command}'? (Y/n): ").strip().lower()
+            if confirm == 'n':
+                print(f"Skipped '{command}'.")
+            else:
                 os.remove(filename)
                 print(f"Uninstalled '{command}'.")
-            else:
-                print(f"Skipped '{command}'.")
         else:
             print(f"Command '{command}' not found.")
