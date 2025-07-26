@@ -1,0 +1,52 @@
+# Welcome to Spoke!
+
+let testVal = 15
+
+print("Before")
+
+if (testVal == 1) then {
+    print ("Branch 1")
+} else if (testVal == 2) then {
+    print ("Branch 2")
+} else if (testVal == 3) then {
+    print ("Branch 3")
+} else if (testVal == 4) then {
+    print ("Branch 4")
+} else if (testVal == 5) then {
+    print ("Branch 5")
+} else if (testVal == 6) then {
+    print ("Branch 6")
+} else if (testVal == 7) then {
+    print ("Branch 7")
+} else if (testVal == 8) then {
+    print ("Branch 8")
+} else if (testVal == 9) then {
+    print ("Branch 9")
+} else if (testVal == 10) then {
+    print ("Branch 10")
+} else if (testVal == 11) then {
+    print ("Branch 11")
+} else if (testVal == 12) then {
+    print ("Branch 12")
+} else if (testVal == 13) then {
+    print ("Branch 13")
+} else if (testVal == 14) then {
+    print ("Branch 14")
+} else if (testVal == 15) then {
+    print ("Branch 15 - FOUND THE RIGHT BRANCH!")
+} else if (testVal == 16) then {
+    print ("Branch 16")
+} else if (testVal == 17) then {
+    print ("Branch 17")
+} else if (testVal == 18) then {
+    print ("Branch 18")
+} else if (testVal == 19) then {
+    print ("Branch 19")
+} else if (testVal == 20) then {
+    print ("Branch 20")
+} else {
+    print ("Default branch")
+}
+
+print("After")
+}

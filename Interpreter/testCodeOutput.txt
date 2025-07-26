@@ -1,0 +1,237 @@
+"""
+SPOKE LANGUAGE INTERPRETER - DEBUG TEST OUTPUT
+==============================================
+
+This is the expected output when running the debug test file with the Spoke interpreter.
+The output shows comprehensive testing of all language features including variables,
+conditionals, functions, mathematical operations, and edge cases.
+"""
+
+# Expected output from running: python spoke.py debug_test.spk
+
+print("""=== SPOKE EXTREME DEBUG TEST STARTING ===
+This test includes comprehensive debugging and edge case testing
+
+DEBUG TEST 1: Variable boundary conditions and edge cases
+Variables created:
+0
+-999
+999
+123.456
+-987.654
+Arithmetic results:
+-999
+-998001
+-1.001001001001001
+-864.198
+
+DEBUG TEST 2: Complex conditional boundary testing
+Equal values detected correctly
+Inequality detected correctly
+Negative comparison works: -5 < 5
+Greater than comparison works: 15 > 10
+AND logic works correctly
+OR logic works correctly
+NOT logic works: not(10 > 15) = true
+Complex negation with AND works
+
+DEBUG TEST 3: Maximum nesting depth test
+Level 1 - depth = 20
+Level 2 - still 20
+Level 3 - greater than 15
+Level 4 - greater than 10
+Level 5 - greater than 5
+Level 6 - greater than 0
+Level 7 - exactly 20
+Level 8 - less than 25
+Level 9 - greater or equal to 20
+Level 10 - MAXIMUM DEPTH REACHED!
+Deep nesting successful
+
+DEBUG TEST 4: Comprehensive else-if chain testing
+Branch 25 - CORRECT BRANCH FOUND!
+Else-if chain working correctly
+
+DEBUG TEST 5: Function complexity and recursion testing
+Calling mathIntensive function
+Function mathIntensive called
+2
+3
+4
+6
+Function mathIntensive called
+6
+3
+3
+18
+Function mathIntensive called
+18
+3
+2
+54
+Function mathIntensive called
+54
+3
+1
+162
+Calling complexCalculation function
+Complex calculation starting
+Calculation steps:
+15
+30
+20
+4.0
+6.0
+Complex calculation complete
+
+DEBUG TEST 6: Variable manipulation stress test
+Initial values:
+100
+200
+300
+400
+After swapping a<->d, b<->c:
+400
+300
+200
+100
+400 is Equal to 300
+200 is Greater than 100
+Pre-toggle values:
+0
+1
+true
+false
+Post-toggle values:
+1
+0
+false
+true
+
+DEBUG TEST 7: String operations comprehensive testing
+String lengths:
+10
+10
+10
+15
+89
+10
+10
+15
+89
+Original strings:
+HelloWorld
+!@#$%^&*()
+1234567890
+Shuffled strings:
+[Random shuffled version of HelloWorld]
+[Random shuffled version of !@#$%^&*()]
+[Random shuffled version of 1234567890]
+
+DEBUG TEST 8: Mathematical edge case testing
+Mathematical edge case results:
+1
+0.999999
+-56088
+333
+Modulo with mixed signs:
+-4
+456
+
+DEBUG TEST 9: Function parameter boundary testing
+Function with no parameters called
+42
+Function with one parameter:
+999
+Function with many parameters:
+1
+2
+3
+4
+5
+6
+7
+8
+Sum of all parameters:
+36
+
+DEBUG TEST 10: Scope and variable persistence testing
+Before function call - global variable:
+I_AM_GLOBAL
+Inside function - parameter:
+PARAMETER_VALUE
+Inside function - global variable:
+I_AM_GLOBAL
+Inside function - local variable:
+I_AM_LOCAL
+Modified global variable inside function:
+MODIFIED_BY_FUNCTION
+After function call - global variable:
+MODIFIED_BY_FUNCTION
+
+DEBUG TEST 11: Error boundary testing (controlled)
+Error boundary tests completed (dangerous operations commented out)
+
+DEBUG TEST 12: Nested function call complexity
+Outer function called with:
+5
+Outer result:
+15
+Inner function called with:
+15
+Inner result:
+30
+
+DEBUG TEST 13: Conditional complexity with function integration
+Conditional test with value:
+100
+Value is greater than 50
+Value is greater than 75
+Value is exactly 100!
+Conditional test with value:
+60
+Value is greater than 50
+Value is between 50 and 75
+Conditional test with value:
+30
+Value is between 25 and 50
+Conditional test with value:
+10
+Value is between 0 and 25
+Conditional test with value:
+-5
+Value is negative or zero
+
+DEBUG TEST 14: Ultimate combined stress test
+Ultimate stress test starting with:
+25
+Level 1 condition met
+Inner stress condition met
+Deep nested math condition met
+Toggle worked in deep nesting
+25 is Equal to 25
+Before ultimate swap:
+50
+25
+After ultimate swap:
+25
+50
+Ultimate stress test starting with:
+10
+Alternative ultimate path
+
+DEBUG TEST 15: Final comprehensive verification
+Final verification - basic math:
+15
+5
+50
+2.0
+0
+Final conditional verification: PASSED
+Final variable verification:
+10
+5
+17
+=== DEBUG TEST COMPLETED SUCCESSFULLY ===
+If you see this message, your Spoke interpreter survived extreme debugging!
+All major language features have been tested under stress conditions.""")
