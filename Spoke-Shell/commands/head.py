@@ -1,6 +1,10 @@
 import os 
 
 def run(args):
+    if not args:
+        print("Usage: head <file>")
+        return
+
     file_path = args[0]  
 
     try:
