@@ -3,7 +3,7 @@ import webbrowser
 
 def run(args):
     if not args:
-        print("Usage: xdg-open <https://example.com>")
+        print("Usage: xdg <https://example.com>")
         return
     
     url = args[0]
