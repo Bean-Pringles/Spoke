@@ -11,3 +11,4 @@ Thank you for the support
 For the browser I recommend making a virtual enviorment inside the browser file and installing
 pip install PyQt5 PyQtWebEngine
 It gives an error otherwise
+Look up how to do that for your os, it is very wierd otherwise, and I dont know why
