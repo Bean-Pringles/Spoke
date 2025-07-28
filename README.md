@@ -1,4 +1,5 @@
-Alpha 2.0.3.45
+100 COMMITS!
+Alpha 2.0.3.47
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
 
