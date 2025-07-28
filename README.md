@@ -7,5 +7,3 @@ Please look at spokeGuide.txt for the full syntax rules.
 You can also view it through the text editor by going to view and view help guide.
 If you find any bugs please report an issue.
 Thank you for the support
-
-I did plagiarize the clacualtor from https://github.com/campusx-official/python-gui-tkinter/tree/main so check them out
