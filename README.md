@@ -1,5 +1,5 @@
 100 COMMITS!
-Alpha 2.0.3.47
+Alpha 2.0.4.47
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
 
@@ -13,3 +13,4 @@ For the browser I recommend making a virtual enviorment inside the browser file 
 pip install PyQt5 PyQtWebEngine
 It gives an error otherwise
 Look up how to do that for your os, it is very wierd otherwise, and I dont know why
+Or you can run setup.py
