@@ -169,13 +169,27 @@ def pull_current_version(project_path):
 
 def pull_restore_version(project_path, version):
     project_name = get_project_name(project_path)
-    pull_path = os.path.join(backup_root, project_name, version)
+    project_versions_path = os.path.join(backup_root, project_name)
 
-    if not os.path.exists(pull_path):
-        print(f"No version found for this project '{project_name}', version '{version}'.")
+    if not os.path.exists(project_versions_path):
+        print(f"No versions found for project '{project_name}'.")
         return
 
-    # Clean the project folder (but not the backups folder)
+    sorted_versions = get_sorted_version_folders(project_versions_path)
+    target_version = parse_version(version)
+
+    # Filter versions up to and including the target
+    versions_to_apply = [
+        v for v in sorted_versions if parse_version(v) <= target_version
+    ]
+
+    if not versions_to_apply:
+        print(f"No applicable versions found up to '{version}'.")
+        return
+
+    print(f"Restoring full project state from versions up to: {version}")
+    
+    # Clean the current project folder
     for item in os.listdir(project_path):
         item_path = os.path.join(project_path, item)
         if item == "backups":
@@ -188,17 +202,32 @@ def pull_restore_version(project_path, version):
         except Exception as e:
             print(f"Failed to delete {item_path}: {e}")
 
-    # Copy files from current/ into project folder
-    for root, _, files in os.walk(pull_path):
-        rel_path = os.path.relpath(root, pull_path)
-        dest_dir = os.path.join(project_path, rel_path)
-        os.makedirs(dest_dir, exist_ok=True)
-        for file in files:
-            src_file = os.path.join(root, file)
-            dst_file = os.path.join(dest_dir, file)
-            shutil.copy2(src_file, dst_file)
+    # Dict to track latest version and source path for each file
+    restored_files = {}  # rel_path -> (version, full_file_path)
 
-    print(f"Pulled current version into: {project_path}")
+    for ver in versions_to_apply:
+        version_dir = os.path.join(project_versions_path, ver)
+        for root, _, files in os.walk(version_dir):
+            rel_path = os.path.relpath(root, version_dir)
+            for file in files:
+                if file == "comment.txt":
+                    continue
+                file_rel = os.path.normpath(os.path.join(rel_path, file))
+                full_path = os.path.join(root, file)
+                # Always take latest version in list
+                restored_files[file_rel] = (ver, full_path)
+
+    # Apply latest version of each file
+    for rel_path, (ver, src_file) in restored_files.items():
+        dst_file = os.path.join(project_path, rel_path)
+        os.makedirs(os.path.dirname(dst_file), exist_ok=True)
+        shutil.copy2(src_file, dst_file)
+
+    print(f"\n Restored {len(restored_files)} file(s):\n")
+    for rel_path, (ver, _) in sorted(restored_files.items()):
+        print(f"  - {rel_path} (from version {ver})")
+
+    print(f"\nProject restored to full state as of version {version}.")
 
 def clone_repo(source_path, dest_path):
     source_path = os.path.abspath(source_path)
