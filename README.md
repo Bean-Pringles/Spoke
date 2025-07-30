@@ -16,3 +16,5 @@ Or you can run setup.py
 
 The git command is also really diffrent from normal git but you cant win everything.
 Look in the code to see how it works.
+
+Same with ssh, it is the best format I could give you but it still sucks.
