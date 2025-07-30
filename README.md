@@ -1,4 +1,4 @@
-Beta 1.2.6.42
+Beta 1.2.6.45
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
 
