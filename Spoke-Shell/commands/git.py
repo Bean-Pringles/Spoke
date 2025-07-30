@@ -242,8 +242,18 @@ def clone_repo(source_path, dest_path):
     print(f"Cloned project into: {dest_path}")
 
 def run(args_list=None):
+    valid_commands = ["push", "version", "pull", "restore", "clone"]
+
+    if args_list is None:
+        args_list = sys.argv[1:]
+
+    if not args_list or args_list[0] not in valid_commands:
+        print(f"Invalid command: '{args_list[0]}'" if args_list else "No command provided.")
+        print("Available commands: push, version, pull, restore, clone")
+        return
+
     parser = argparse.ArgumentParser(description="BeanGit: simple versioned backup tool")
-    parser.add_argument("command", choices=["push", "version", "pull", "restore", "clone"], help="Command to run")
+    parser.add_argument("command", choices=valid_commands, help="Command to run")
     parser.add_argument("version_or_comment", nargs="?", help="Version string or version command")
     parser.add_argument("comment", nargs="*", help="Commit comment (for push only)")
     parser.add_argument("-p", "--path", default=os.getcwd(), help="Path to project folder (default: current directory)")
@@ -276,7 +286,7 @@ def run(args_list=None):
 
     elif args.command == "pull":
         pull_current_version(project_path)
-    
+
     elif args.command == "restore":
         if not args.version_or_comment:
             print("Error: restore requires a version number.")
@@ -289,7 +299,6 @@ def run(args_list=None):
             return
         source = args.version_or_comment
         destination = args.path
-
         if source.startswith("http"):
             clone_from_github(source, destination)
         else:
