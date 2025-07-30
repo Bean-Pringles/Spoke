@@ -55,7 +55,7 @@ def run(args):
                 continue
 
             filename = f"{command_name}.py"
-            download_url = repo_base_url + filename
+            download_url = repo_base_url + command_name + "/" + filename 
             dest_path = os.path.join(commands_dir, filename)
 
             if os.path.isfile(dest_path):
@@ -148,4 +148,3 @@ def run(args):
             for app in app_folders:
                 print(f"  - {app}")
             print("Run command: app run <app name>")
-
