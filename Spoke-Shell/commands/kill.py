@@ -1,3 +1,6 @@
+import psutil
+import os
+
 def run(args):
     if not args:
         print("Usage: kill <processName>")
