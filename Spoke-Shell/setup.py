@@ -1,13 +1,14 @@
 import os
 import subprocess
+import sys
+import winreg
+from pathlib import Path
 
 def set_up_virtual_environment():
     permission = input("Permission to install a Python virtual environment in the browser app? This is required to run. (Y/n) ")
 
     if permission.lower() != "n":
-        # Use current working directory (where script was run from)
-        base_path = os.getcwd()
-
+        base_path = os.path.dirname(os.path.abspath(__file__))
         target_path = os.path.abspath(os.path.join(base_path, "apps", "browser"))
         venv_path = os.path.join(target_path, "venv")
 
@@ -29,7 +30,6 @@ def set_up_virtual_environment():
         else:
             print(f"Virtual environment already exists at: {venv_path}")
 
-        # Check if ensurepip is available
         try:
             result = subprocess.run([python_path, "-m", "ensurepip", "--version"],
                                     capture_output=True, text=True)
@@ -43,7 +43,6 @@ def set_up_virtual_environment():
             print(f"Error running ensurepip: {e}")
             return
 
-        # Install packages
         try:
             subprocess.run([pip_path, "install", "--upgrade", "pip"], check=True)
             subprocess.run([pip_path, "install", "PyQt5", "PyQtWebEngine"], check=True)
@@ -53,5 +52,60 @@ def set_up_virtual_environment():
     else:
         print("Virtual environment installation was skipped.")
 
-# Run it
+def add_to_user_path(new_path: str):
+    permission = input("Permission to add the shell command to path? This is optional. (Y/n) ")
+
+    if permission.lower() == "n":
+        return
+    
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Environment", 0, winreg.KEY_READ) as key:
+            try:
+                current_path, _ = winreg.QueryValueEx(key, "Path")
+            except FileNotFoundError:
+                current_path = ""
+    except Exception as e:
+        print(f"Error reading PATH from registry: {e}")
+        return
+
+    paths = current_path.split(";") if current_path else []
+    if new_path in paths:
+        print(f"Path already contains: {new_path}")
+        return
+
+    paths.append(new_path)
+    updated_path = ";".join(paths)
+    try:
+        with winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Environment", 0, winreg.KEY_SET_VALUE) as key:
+            winreg.SetValueEx(key, "Path", 0, winreg.REG_EXPAND_SZ, updated_path)
+        print(f"Added to PATH: {new_path}")
+        print("You must restart CMD/PowerShell for changes to take effect.")
+    except Exception as e:
+        print(f"Error updating PATH in registry: {e}")
+
+def install_shell_command():
+    script_dir = Path(__file__).parent.resolve()
+    shell_script = script_dir / "shell.py"
+    if not shell_script.exists():
+        print(f"shell.py not found at {shell_script}")
+        return
+
+    user_bin = Path.home() / "bin"
+    user_bin.mkdir(exist_ok=True)
+    bat_path = user_bin / "shell.bat"
+
+    try:
+        with open(bat_path, "w") as f:
+            f.write(f"""@echo off
+python "{shell_script}" %*
+""")
+        print(f"Created launcher: {bat_path}")
+    except Exception as e:
+        print(f"Error creating .bat file: {e}")
+        return
+
+    add_to_user_path(str(user_bin))
+
+# Run both setup steps
 set_up_virtual_environment()
+install_shell_command()
