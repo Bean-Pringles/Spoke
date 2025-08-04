@@ -13,6 +13,10 @@ It gives an error otherwise
 Look up how to do that for your os, it is very wierd otherwise, and I dont know why
 Or you can run setup.py, which can also add the shell command to path
 
+setup.py will add the shell command to path, and will make a
+virtual environment in the browser folder
+(for someone reason thier will be errors)
+
 The git command is also really diffrent from normal git but you cant win everything.
 Look in the code to see how it works.
 
