@@ -268,14 +268,14 @@ class SettingsDialog(QDialog):
         # Home page setting
         home_layout = QHBoxLayout()
         home_layout.addWidget(QLabel("Home Page:"))
-        self.home_edit = QLineEdit("https://www.google.com")
+        self.home_edit = QLineEdit("https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0")
         home_layout.addWidget(self.home_edit)
         
         # Search engine setting
         search_layout = QHBoxLayout()
         search_layout.addWidget(QLabel("Search Engine:"))
         self.search_combo = QComboBox()
-        self.search_combo.addItems(["Google", "DuckDuckGo", "Bing", "Yahoo"])
+        self.search_combo.addItems(["Bean Engine", "Google", "DuckDuckGo", "Bing", "Yahoo"])
         search_layout.addWidget(self.search_combo)
         
         # Theme setting
@@ -340,7 +340,7 @@ class MainWindow(QMainWindow):
         self.setup_toolbar()
         
         # Add initial tab
-        self.add_new_tab(QUrl(self.settings.get('home_page', 'https://www.google.com')))
+        self.add_new_tab(QUrl(self.settings.get('home_page', 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0')))
         
         # Apply theme
         self.apply_theme()
@@ -364,7 +364,7 @@ class MainWindow(QMainWindow):
                 self.settings = json.load(f)
         except FileNotFoundError:
             self.settings = {
-                'home_page': 'https://www.google.com',
+                'home_page': 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0',
                 'search_engine': 'Google',
                 'theme': 'Light',
                 'javascript': True,
@@ -411,7 +411,7 @@ class MainWindow(QMainWindow):
         
         new_tab_action = QAction("New Tab", self)
         new_tab_action.setShortcut("Ctrl+T")
-        new_tab_action.triggered.connect(lambda: self.add_new_tab(QUrl(self.settings.get('home_page', 'https://www.google.com'))))
+        new_tab_action.triggered.connect(lambda: self.add_new_tab(QUrl(self.settings.get('home_page', 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0'))))
         file_menu.addAction(new_tab_action)
         
         new_window_action = QAction("New Window", self)
@@ -702,6 +702,7 @@ class MainWindow(QMainWindow):
         else:
             # Search query
             search_engines = {
+                'Bean Engine': 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0&gsc.q={}',
                 'Google': 'https://www.google.com/search?q={}',
                 'DuckDuckGo': 'https://duckduckgo.com/?q={}',
                 'Bing': 'https://www.bing.com/search?q={}',
@@ -741,7 +742,7 @@ class MainWindow(QMainWindow):
     
     def navigate_home(self):
         """Navigate to home page"""
-        home_url = self.settings.get('home_page', 'https://www.google.com')
+        home_url = self.settings.get('home_page', 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0')
         current_browser = self.tabs.currentWidget()
         if current_browser:
             current_browser.load(QUrl(home_url))
@@ -911,7 +912,7 @@ class MainWindow(QMainWindow):
         menu = QMenu(self)
         
         # Add common actions
-        menu.addAction("New Tab", lambda: self.add_new_tab(QUrl(self.settings.get('home_page', 'https://www.google.com'))))
+        menu.addAction("New Tab", lambda: self.add_new_tab(QUrl(self.settings.get('home_page', 'https://cse.google.com/cse?cx=347ea4ef67cbc42a7#gsc.tab=0'))))
         menu.addAction("New Window", self.new_window)
         menu.addSeparator()
         menu.addAction("Bookmarks", self.show_bookmarks_manager)
