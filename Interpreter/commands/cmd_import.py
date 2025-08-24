@@ -1,5 +1,6 @@
 import requests
 from pathlib import Path
+import os
 
 def run(tokens, variables, functions, get_val, errorLine, lineNum, line):
     """
@@ -90,4 +91,9 @@ def run(tokens, variables, functions, get_val, errorLine, lineNum, line):
         else:
             print("Installation skipped.")
 
+    if os.name == 'nt':  # For Windows
+        _ = os.system('cls')
+    else:  # For Linux and macOS
+        _ = os.system('clear')
+    
     return True  # always succeed unless a real error
