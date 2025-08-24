@@ -1,2 +1,3 @@
-random
+&& random
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/random.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/shuffle.py
