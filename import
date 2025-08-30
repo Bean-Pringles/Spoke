@@ -1,3 +1,8 @@
 && random
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_random.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_shuffle.py
+&& math
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_compare.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_math.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_round.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
