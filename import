@@ -9,3 +9,12 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle
 && file
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_save.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_read.py
+&& var
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_inc.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_dec.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_compare.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_delete.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_length.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_let.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_swap.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
