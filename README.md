@@ -1,5 +1,7 @@
-Beta 1.3.1.13
-***YOU DO NOT NEED ANYTHING ABOVE THE INTERPRETR AND SPOKE-SHELL FOLDER, THIS IS USED FOR THE REMOTE DOWNLOADS***
+Beta 1.3.1.35
+***YOU DO NOT NEED THE IMPORTS FILE, THIS IS USED FOR THE REMOTE DOWNLOADS***
+Run setup.py in the Spoke-Shell folder to setup a venv in the browser file and to 
+add the shell command to path.
 
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
@@ -7,7 +9,6 @@ it looks the same but is quite diffrent :D
 Please look at spokeGuide.txt for the full syntax rules. 
 You can also view it through the text editor by going to view and view help guide.
 If you find any bugs please report an issue.
-Thank you for the support
 
 For the browser I recommend making a virtual enviorment inside the browser file and installing
 pip install PyQt5 PyQtWebEngine
@@ -20,6 +21,5 @@ virtual environment in the browser folder
 (for someone reason thier will be errors)
 
 The git command is also really diffrent from normal git but you cant win everything.
-Look in the code to see how it works.
-
-Same with ssh, it is the best format I could give you but it still sucks.
+Look in the code to see how it works. Same with ssh, 
+it is the best format I could give you but it still sucks.
