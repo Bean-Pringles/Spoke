@@ -1,4 +1,4 @@
-Beta 1.3.2.02
+Beta 1.4.0.0
 ***YOU DO NOT NEED THE IMPORTS FILE, THIS IS USED FOR THE REMOTE DOWNLOADS***
 Run setup.py in the Spoke-Shell folder to setup a venv in the browser file and to 
 add the shell command to path. Also run:
