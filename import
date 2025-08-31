@@ -7,6 +7,7 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_math.p
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_round.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_sqrt.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_mod.py
 && file
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_save.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_read.py
@@ -19,3 +20,4 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_length
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_let.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_swap.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_mod.py
