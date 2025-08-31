@@ -6,3 +6,6 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_compar
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_math.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_round.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
+&& file
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_save.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_read.py
