@@ -1,0 +1,20 @@
+The proper file structure for making your own commands is:
+1. The only thing ran is the run function
+2. If it has user arguements, it must say what it does if the user doesnt specify anything.
+3. While optional, have a comment at the top that specifies the file path from the shell helps
+   # commands/exampleCommand.py
+4. The file name is the commands name, so ls would be ls.py
+
+It would look like:
+#commands/exampleCommand.py
+import os
+
+def run(args):
+    if not args:
+        print("Usage: exampleCommand <exampleCommandFile.txt>")
+        return
+
+    print("Command Ran")
+
+**The return in if not in args catches it if it doesn't have any args so you don't need to have
+an if statement over the command*
