@@ -1,4 +1,4 @@
-Beta 1.3.0.2
+Beta 1.3.0.42
 ***YOU DO NOT NEED ANYTHING ABOVE THE INTERPRETR AND SPOKE-SHELL FOLDER, THIS IS USED FOR THE REMOTE DOWNLOADS***
 
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
