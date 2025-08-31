@@ -51,13 +51,28 @@ def run(tokens, variables, functions, get_val, errorLine, lineNum, line):
     if "all" in libs_to_import:
         libs_to_import = list(libraries.keys())
 
+    def convert_to_raw_url(url):
+        """Convert GitHub URLs to raw content URLs"""
+        if "github.com" in url and "/blob/" in url:
+            # Convert github.com/user/repo/blob/branch/file to raw.githubusercontent.com/user/repo/branch/file
+            parts = url.replace("https://github.com/", "").split("/")
+            if len(parts) >= 4 and parts[2] == "blob":
+                user = parts[0]
+                repo = parts[1]
+                branch = parts[3]
+                file_path = "/".join(parts[4:])
+                return f"https://raw.githubusercontent.com/{user}/{repo}/{branch}/{file_path}"
+        return url  # Return original URL if not a GitHub blob URL
+
     # Collect missing files
     missing_files = []
     for lib in libs_to_import:
         if lib not in libraries:
             continue
         for url in libraries[lib]:
-            filename = url.split("/")[-1]
+            # Convert to raw URL if it's a GitHub blob URL
+            raw_url = convert_to_raw_url(url)
+            filename = raw_url.split("/")[-1]
 
             # Prevent double cmd_cmd_ bug
             if not filename.startswith("cmd_"):
@@ -65,13 +80,13 @@ def run(tokens, variables, functions, get_val, errorLine, lineNum, line):
 
             filepath = commands_dir / filename
             if not filepath.exists():
-                missing_files.append((filename, url))
+                missing_files.append((filename, raw_url))
 
     if missing_files:
         # Bulk confirmation (defaults to YES)
         print("The following commands are missing and will be installed:")
         for filename, url in missing_files:
-            print(f" - {filename} ({url})")
+            print(f" - {filename}")
         confirm = input("Proceed with installation? [Y/n]: ").strip().lower()
 
         if confirm not in ("n", "no"):
@@ -81,11 +96,19 @@ def run(tokens, variables, functions, get_val, errorLine, lineNum, line):
                     filepath = commands_dir / filename
                     r = requests.get(url)
                     r.raise_for_status()
-                    filepath.write_text(r.text, encoding="utf-8")
+                    
+                    # Verify we got actual Python code, not HTML
+                    content = r.text
+                    if content.strip().startswith("<!DOCTYPE html") or content.strip().startswith("<html"):
+                        print(f"Error: {filename} - Got HTML instead of Python code from {url}")
+                        continue
+                    
+                    filepath.write_text(content, encoding="utf-8")
                     installed.append(filename)
-                except Exception:
-                    print(f"Error installing {filename} from {url}")
-                    return False  # only fail if a download fails
+                except Exception as e:
+                    print(f"Error installing {filename} from {url}: {e}")
+                    continue  # Continue with other files instead of failing completely
+            
             if installed:
                 print("Installed:", ", ".join(installed))
         else:
