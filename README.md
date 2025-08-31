@@ -1,7 +1,9 @@
 Beta 1.3.1.35
 ***YOU DO NOT NEED THE IMPORTS FILE, THIS IS USED FOR THE REMOTE DOWNLOADS***
 Run setup.py in the Spoke-Shell folder to setup a venv in the browser file and to 
-add the shell command to path.
+add the shell command to path. Also run:
+pip install requirements.txt 
+in the home folder to install all of the required dependencies.
 
 The shell requires its own version of spoke and text editor so make sure to keep it structured how it is, 
 it looks the same but is quite diffrent :D
