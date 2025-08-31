@@ -8,9 +8,10 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_round.
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_sqrt.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_mod.py
-&& file
+&& system
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_save.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_read.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_run.py
 && var
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_inc.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_dec.py
