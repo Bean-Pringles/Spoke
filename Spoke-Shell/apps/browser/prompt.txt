@@ -74,3 +74,24 @@ Finally:
 - Output a **proposed folder structure**.  
 - Generate a **step-by-step implementation roadmap**, starting with the core engine and UI, then layering on advanced features.  
 - Keep the final result scalable so that future contributors can extend it.  
+
+UI / Design Requirements:  
+The browser should look **modern, minimal, and professional**, not like a prototype.  
+- Rounded corners on tabs, buttons, and address bar.  
+- Smooth hover effects, subtle animations (fade/slide for tab switching, button press ripple).  
+- A clean toolbar with icon-based buttons (back, forward, refresh, home, settings).  
+- Consistent spacing, padding, and alignment so everything feels balanced.  
+- Light and dark themes with neutral, elegant colors (no neon, no clutter).  
+- New Tab page should look polished (centered search bar, most visited sites grid with nice icons).  
+- Tabs should look like Chrome/Edge-style pill shapes with clear active tab highlighting.  
+- Status bar should be slim and unobtrusive, with smooth progress indicators.  
+- Settings and dialogs should use a modern card-like design with rounded edges and shadow.  
+
+Go all in on making it **beautiful, intuitive, and clean**. Think like a professional UI/UX designer building a browser that could compete with Chrome or Edge.
+
+
+
+
+
+
+
