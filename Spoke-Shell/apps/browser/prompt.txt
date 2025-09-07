@@ -3,7 +3,7 @@ Do not hold back — make it polished, modular, and full-featured, competitive w
 The code should be clean, well-structured, and use best practices.  
 
 Requirements:  
-- Use **PyQt5 or PySide6 QWebEngine** for rendering and UI.  
+- Use **PyQt5 QWebEngine** for rendering and UI.  
 - Use **sqlite3** for persistent storage.  
 - Use **cryptography (Fernet)** for encryption (passwords, cookies, etc.).  
 - Organize the project into folders: `ui/`, `core/`, `storage/`, `extensions/`, `network/`, `security/`, etc.  
