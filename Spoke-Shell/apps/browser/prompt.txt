@@ -1,0 +1,76 @@
+You are my senior browser engineer. Write full Python code for a modern, production-level web browser. 
+Do not hold back — make it polished, modular, and full-featured, competitive with Chrome or Firefox. 
+The code should be clean, well-structured, and use best practices.  
+
+Requirements:  
+- Use **PyQt5 or PySide6 QWebEngine** for rendering and UI.  
+- Use **sqlite3** for persistent storage.  
+- Use **cryptography (Fernet)** for encryption (passwords, cookies, etc.).  
+- Organize the project into folders: `ui/`, `core/`, `storage/`, `extensions/`, `network/`, `security/`, etc.  
+- Write modular, maintainable classes and functions.  
+- Comment all code clearly.  
+
+Features to implement:  
+1. **Modern UI**  
+   - Tabbed browsing with tab bar, close/reopen tab, drag-and-drop reorder.  
+   - Toolbar with back/forward, refresh, home, search/address bar.  
+   - Status bar with loading progress.  
+   - Dark mode / theming system.  
+
+2. **Password Manager**  
+   - Encrypted password storage (sqlite3 + cryptography).  
+   - Autofill for login forms.  
+   - Password generator.  
+
+3. **History & Bookmarks**  
+   - Persistent history and bookmarks database.  
+   - Searchable history.  
+   - Bookmark manager with folders and tags.  
+   - “Most visited” dashboard on new tab page.  
+
+4. **Extensions / Plugins**  
+   - Lightweight Python API for extensions (hook into requests, modify DOM, add toolbar buttons).  
+   - Simple installer/uninstaller UI for extensions.  
+
+5. **Ad & Tracker Blocking**  
+   - Request filter using blocklists (hosts file or easylist).  
+   - Toggle in settings (on/off).  
+   - Statistics on blocked requests.  
+
+6. **Developer Tools**  
+   - View Page Source.  
+   - Simple JavaScript console using QWebEngine hooks.  
+   - DOM inspector.  
+   - Network requests viewer.  
+
+7. **Performance**  
+   - Page caching system.  
+   - Async networking (where possible).  
+   - Preloading links on hover.  
+   - Lazy loading for tabs.  
+
+8. **Security**  
+   - Private browsing / incognito mode.  
+   - HTTPS enforcement.  
+   - Clear browsing data (cookies, cache, history).  
+   - Permission system (camera, mic, location).  
+
+9. **User Experience Enhancements**  
+   - Download manager with pause/resume.  
+   - PDF viewer.  
+   - Built-in screenshot tool.  
+   - Reader mode (strip ads/formatting).  
+   - Spellcheck in text fields.  
+   - Multi-profile support (separate user data).  
+
+10. **Next-Level Features**  
+   - Cross-device sync (local export/import first).  
+   - Workspace management (group tabs by project).  
+   - Tab search (search across open tabs).  
+   - Integrated notes panel.  
+   - Voice search (speech recognition).  
+
+Finally:  
+- Output a **proposed folder structure**.  
+- Generate a **step-by-step implementation roadmap**, starting with the core engine and UI, then layering on advanced features.  
+- Keep the final result scalable so that future contributors can extend it.  
