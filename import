@@ -21,3 +21,15 @@ https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_length
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_let.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_swap.py
 https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_toggle.py
+&& list
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_list.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_append.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_prepend.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_remove.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_insert.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_listlength.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_listclear.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_contains.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_index.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_reverse.py
+https://github.com/Bean-Pringles/Spoke/blob/main/Interpreter/commands/cmd_sort.py
